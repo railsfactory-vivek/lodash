@@ -1,3 +1,4 @@
+/* Program 4: Find the largest palindrome number when multiple two 3 digit numbers */
 let lod=require('lodash')
 
 let palindrome=[]
