@@ -1,3 +1,4 @@
+/* Program 3: Find a largest prime factor for 600851475143 */
 let lodash=require('lodash');
 let prime = [1], max = 600851475143, k=1;
 function find_prime(max) {
