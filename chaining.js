@@ -6,3 +6,8 @@ let sumOfEvenSquares = lod(numbers)
 		    .map(n => n * n)
 		    .sum()
 console.log(sumOfEvenSquares)
+
+let computedValue= lod(numbers)
+		    .map(function(n){ if(n<=3) { return n;} else { lod(range(4,n)) }})
+		    .value()
+console.log(computedValue)
