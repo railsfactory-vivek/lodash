@@ -2,29 +2,37 @@
 let lodash=require('lodash');
 // following is a code to find prime numbers in list using filter, any
 function isPrime(number) {
-		if(number<=3) {
-				return true;
-		} else {
-				return !isDivisble(number);
-		}
+    if(number<=3) {
+		return true;
+	} else {
+		return !isDivisble(number);
+	}
 }
 
 function isDivisble(number) {
-		let divisors = lodash.range(2, number);
-		return lodash.any(divisors, (divisor) => number % divisor === 0)
+	let divisors = lodash.range(2, number);
+	return lodash.any(divisors, (divisor) => number % divisor === 0)
 }
 
 /* let number = 2 , prime_index = 1, max_prime_index = 11
 while(prime_index < max_prime_index) { 
-			isPrime(++number) ? prime_index++ : number
-} */
+	isPrime(++number) ? prime_index++ : number
+} 
 
 function find_prime(number, prime_index, max_prime_index) {
-		if(prime_index<max_prime_index) {
-										isPrime(++number) ? prime_index++ : number
-										return find_prime(number, prime_index, max_prime_index)
-		}
-		return number
+	if(prime_index<max_prime_index) {
+		isPrime(++number) ? prime_index++ : number
+		return find_prime(number, prime_index, max_prime_index)
+	}
+	return number
 }
 let number = find_prime(2, 1, 1001)
-console.log('1001st prime number is:'+number);
+*/
+function findNthPrimeNumber(index, numberAfter=2) {
+	if(isPrime(numberAfter)) {
+		index--
+	}
+	return index>0 ? findNthPrimeNumber(index, ++numberAfter) : numberAfter
+}
+let NthPrimeNumber = findNthPrimeNumber(1001)
+console.log('1001st prime number is:'+ NthPrimeNumber);
