@@ -14,18 +14,17 @@ function isDivisble(number) {
 		return lodash.any(divisors, (divisor) => number % divisor === 0)
 }
 
-/* let number = 2 , i = 1, max = 11
-while(i < max) { 
-			isPrime(++number) ? i++ : number
+/* let number = 2 , prime_index = 1, max_prime_index = 11
+while(prime_index < max_prime_index) { 
+			isPrime(++number) ? prime_index++ : number
 } */
 
-function find_prime(number, i, max) {
-		if(i<max) {
-										isPrime(++number) ? i++ : number
-										return find_prime(number, i, max)
+function find_prime(number, prime_index, max_prime_index) {
+		if(prime_index<max_prime_index) {
+										isPrime(++number) ? prime_index++ : number
+										return find_prime(number, prime_index, max_prime_index)
 		}
 		return number
 }
 let number = find_prime(2, 1, 1001)
-console.log('10001st prime number is:'+number);
-//console.log(lodash.range(1, 7).filter(n => isPrime(n)))
+console.log('1001st prime number is:'+number);
