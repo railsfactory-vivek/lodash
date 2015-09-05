@@ -1,4 +1,4 @@
-/* Program 8: Find a specific indexed prime number */
+/* Program 7: Find a specific indexed prime number */
 let lodash=require('lodash');
 // following is a code to find prime numbers in list using filter, any
 function isPrime(number) {

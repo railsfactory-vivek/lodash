@@ -1,9 +1,9 @@
-/* Program 5: This is to find a smallest multiple which can be divisible by all the numbers in range 1 to 20 */
+/* Program 6: This is to find a smallest multiple which can be divisible by all the numbers in range 1 to 20 */
 
 let lodash = require('lodash')
 
 function findSmallestMultiple(multiplier=2520, dividers = lodash.range(11,21)) {
-  if(!lodash.every(dividers, (divider) => multiplier % divider == 0)) {
+  if(!lodash.every(dividers, (divider) => multiplier % divider == 0)) { 
 				return findSmallestMultiple(++multiplier, dividers)
   }
 		return multiplier;

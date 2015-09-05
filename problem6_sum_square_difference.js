@@ -1,4 +1,4 @@
-/* Program 7: Find the difference between square of sum and sum of square of first 100 natural numbers */
+/* Program 6: Find the difference between square of sum and sum of square of first 100 natural numbers */
 let lodash=require('lodash')
 
 let numbers = lodash.range(1,101)
